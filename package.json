@@ -1,0 +1,75 @@
+{
+  "name": "ai-news-widget",
+  "productName": "AI News Widget",
+  "version": "1.0.0",
+  "description": "Красивый десктопный виджет новостей ИИ в стиле Apple: лента из 12 RSS-источников и каталог из 120 ИИ-моделей с ценами в USD и RUB",
+  "main": "main.js",
+  "author": "PozzE",
+  "license": "MIT",
+  "homepage": "https://github.com/PozzE/ai-news-widget",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PozzE/ai-news-widget.git"
+  },
+  "keywords": [
+    "ai",
+    "news",
+    "electron",
+    "widget",
+    "llm",
+    "rss",
+    "desktop"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "preview": "node tools/serve.js",
+    "icons": "electron tools/gen-icons.js",
+    "pack": "electron-builder --win dir",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.pozze.ai-news-widget",
+    "productName": "AI News Widget",
+    "copyright": "© 2026 PozzE · MIT",
+    "artifactName": "AI-News-Widget-Setup-${version}.exe",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json",
+      "models.json",
+      "renderer/**/*",
+      "assets/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AI News Widget",
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "installerHeaderIcon": "assets/icon.ico",
+      "deleteAppDataOnUninstall": false,
+      "language": "1049"
+    }
+  }
+}

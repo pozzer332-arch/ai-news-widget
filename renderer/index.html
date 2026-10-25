@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; font-src 'self' data:" />
+  <title>AI Widget</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stage" id="stage">
+
+    <!-- ░░ Стеклянная карточка ░░ -->
+    <div class="glass">
+      <div class="aurora a1"></div>
+      <div class="aurora a2"></div>
+      <div class="aurora a3"></div>
+      <div class="grain"></div>
+
+      <!-- Хром-панель (перетаскивание окна) -->
+      <header class="chrome">
+        <div class="traffic">
+          <button class="tl close" id="btnClose" title="Свернуть в трей"><span>×</span></button>
+          <button class="tl min"   id="btnMin"   title="Свернуть"><span>−</span></button>
+          <button class="tl zoom"  id="btnZoom"  title="Компактный режим"><span id="zoomGlyph">⤢</span></button>
+        </div>
+        <div class="chrome-spacer"></div>
+        <div class="tools">
+          <button class="tool" id="btnSearch" title="Поиск (Ctrl+F)"><span data-icon="search"></span></button>
+          <button class="tool" id="btnPin" title="Поверх всех окон"><span data-icon="pin"></span></button>
+          <button class="tool" id="btnTheme" title="Светлая / тёмная тема"><span data-icon="moon"></span></button>
+          <button class="tool accent" id="btnRefresh" title="Обновить"><span class="spin" data-icon="refresh-cw"></span></button>
+        </div>
+      </header>
+
+      <!-- ░░ Первичная вкладка: AI ░░ -->
+      <nav class="tabbar" id="tabbar">
+        <button class="tab is-active" id="tabAI" title="Раздел AI">
+          <span class="tab-ico" data-icon="sparkles"></span>
+          <span class="tab-label">AI</span>
+          <i class="tab-underline"></i>
+        </button>
+        <span class="tabbar-meta">
+          <span class="live" id="liveDot"></span>
+          <span id="brandMeta">Загрузка…</span>
+        </span>
+        <span class="tab-spacer"></span>
+        <span class="tab-date" id="brandDate"></span>
+      </nav>
+
+      <!-- Поиск -->
+      <div class="searchwrap" id="searchWrap">
+        <span class="search-ico" data-icon="search"></span>
+        <input type="search" id="searchInput" placeholder="Поиск…" autocomplete="off" spellcheck="false" />
+        <button class="search-clear" id="searchClear" title="Очистить"><span data-icon="x"></span></button>
+      </div>
+
+      <!-- ░░ Вторичные вкладки: Новости / Модели ░░ -->
+      <nav class="segmented" id="segmented" data-active="news">
+        <span class="seg-thumb"></span>
+        <button class="seg is-active" data-view="news">
+          <span data-icon="newspaper"></span>Новости
+        </button>
+        <button class="seg" data-view="models">
+          <span data-icon="brain"></span>Модели
+        </button>
+      </nav>
+
+      <!-- Фильтры (зависят от вкладки) -->
+      <nav class="chips" id="chips"></nav>
+
+      <!-- Лента -->
+      <main class="feed" id="feed" tabindex="0"></main>
+
+      <!-- Компактный режим -->
+      <section class="hero" id="hero" hidden></section>
+
+      <!-- Нижняя панель -->
+      <footer class="statusbar">
+        <span class="status" id="statusText">Автообновление каждые 10 мин</span>
+        <span class="status-meta" id="statusMeta"></span>
+      </footer>
+    </div>
+
+    <!-- Тост -->
+    <div class="toast" id="toast" role="status"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

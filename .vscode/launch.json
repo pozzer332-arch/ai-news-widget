@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "▶  Запустить виджет (F5)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/electron/cli.js",
+      "args": ["."],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "outputCapture": "std"
+    },
+    {
+      "name": "🌐  Предпросмотр дизайна в браузере",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/tools/serve.js",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "🧩  Пересобрать иконки из SVG",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/electron/cli.js",
+      "args": ["tools/gen-icons.js"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "▶  Виджет + предпросмотр",
+      "configurations": ["▶  Запустить виджет (F5)", "🌐  Предпросмотр дизайна в браузере"],
+      "stopAll": true
+    }
+  ]
+}

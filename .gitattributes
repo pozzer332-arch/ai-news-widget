@@ -1,0 +1,17 @@
+# Автоматическое определение текстовых файлов
+* text=auto
+
+# Переносы строк — только LF (кроме *.cmd, там нужен CRLF)
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Бинарные ресурсы
+*.png   binary
+*.ico   binary
+*.icns  binary
+*.woff2 binary
+*.ttf   binary
+*.zip   binary
+*.exe   binary
+*.7z    binary

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+preview-news.json
+npm-debug.log*
+.DS_Store
+Thumbs.db
+*.log
+*.suo
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
