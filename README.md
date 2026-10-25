@@ -7,8 +7,8 @@
 
 Electron 33 · чистый HTML/CSS/JS · **без единого фреймворка**
 
-[![Релиз](https://img.shields.io/github/v/release/PozzE/ai-news-widget?style=flat-square&label=%D0%A0%D0%B5%D0%BB%D0%B8%D0%B7&color=0A84FF)](https://github.com/PozzE/ai-news-widget/releases/latest)
-[![Сборка](https://img.shields.io/github/actions/workflow/status/PozzE/ai-news-widget/build.yml?branch=main&style=flat-square&label=%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0)](https://github.com/PozzE/ai-news-widget/actions/workflows/build.yml)
+[![Релиз](https://img.shields.io/github/v/release/pozzer332-arch/ai-news-widget?style=flat-square&label=%D0%A0%D0%B5%D0%BB%D0%B8%D0%B7&color=0A84FF)](https://github.com/pozzer332-arch/ai-news-widget/releases/latest)
+[![Сборка](https://img.shields.io/github/actions/workflow/status/pozzer332-arch/ai-news-widget/build.yml?branch=main&style=flat-square&label=%D0%A1%D0%B1%D0%BE%D1%80%D0%BA%D0%B0)](https://github.com/pozzer332-arch/ai-news-widget/actions/workflows/build.yml)
 [![Лицензия](https://img.shields.io/badge/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%81-MIT-30D158?style=flat-square)](LICENSE)
 [![Electron](https://img.shields.io/badge/Electron-33-47848F?style=flat-square&logo=electron&logoColor=white)](https://www.electronjs.org/)
 [![Модели](https://img.shields.io/badge/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-120%20%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B5%D0%B9-BF5AF2?style=flat-square)](#-каталог-моделей)
@@ -45,7 +45,7 @@ Electron 33 · чистый HTML/CSS/JS · **без единого фреймв�
 
 ## 📥 Установка
 
-1. Откройте **[страницу релизов](https://github.com/PozzE/ai-news-widget/releases/latest)**
+1. Откройте **[страницу релизов](https://github.com/pozzer332-arch/ai-news-widget/releases/latest)**
 2. Скачайте **`AI-News-Widget-Setup-1.0.0.exe`**
 3. Запустите файл и следуйте мастеру установки
 4. Ярлык **AI News Widget** появится на рабочем столе и в меню «Пуск»
@@ -101,7 +101,7 @@ Electron 33 · чистый HTML/CSS/JS · **без единого фреймв�
 ### Вариант 3 — терминал
 
 ```bash
-git clone https://github.com/PozzE/ai-news-widget.git
+git clone https://github.com/pozzer332-arch/ai-news-widget.git
 cd ai-news-widget
 npm install
 npm start

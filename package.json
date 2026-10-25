@@ -6,10 +6,10 @@
   "main": "main.js",
   "author": "PozzE",
   "license": "MIT",
-  "homepage": "https://github.com/PozzE/ai-news-widget",
+  "homepage": "https://github.com/pozzer332-arch/ai-news-widget",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PozzE/ai-news-widget.git"
+    "url": "https://github.com/pozzer332-arch/ai-news-widget.git"
   },
   "keywords": [
     "ai",
