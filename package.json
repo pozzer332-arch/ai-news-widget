@@ -24,8 +24,8 @@
     "start": "electron .",
     "preview": "node tools/serve.js",
     "icons": "electron tools/gen-icons.js",
-    "pack": "electron-builder --win dir",
-    "dist": "electron-builder --win nsis"
+    "pack": "electron-builder --win dir --publish never",
+    "dist": "electron-builder --win nsis --publish never"
   },
   "devDependencies": {
     "electron": "^33.2.0",
